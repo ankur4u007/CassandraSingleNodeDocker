@@ -6,7 +6,7 @@ ENV DIRPATH /home
 
 WORKDIR $DIRPATH
 
-RUN  yum -y install tar
+RUN  yum -y install tar unzip
 
 RUN  curl -j -k -L -H "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/7u80-b15/jre-7u80-linux-x64.rpm > jre7.rpm \
 && yum -y localinstall jre7.rpm && rm -f jre7.rpm
